@@ -1,0 +1,25 @@
+@import '../../scss/mixins';
+
+.Burger {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 50%;
+	margin: auto;
+	height: 350px;
+	overflow: auto;
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.2rem;
+
+	@include mQ(320px, 480px) {
+		width: 90%;
+	}
+	@include mQ(481px, 564px) {
+		width: 80%;
+	}
+	@include mQ(565px, 720px) {
+		width: 60%;
+	}
+}
