@@ -11,7 +11,7 @@ const burger = (props) => {
 		}
 	});
 	let burgerIg = newIgArr.map((curr, index) => {
-		return <BurgerIngredients type={curr} key={index} />;
+		return <BurgerIngredients type={curr} key={curr + index} />;
 	});
 
 	if (newIgArr.length === 0) {
