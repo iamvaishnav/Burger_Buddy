@@ -1,0 +1,29 @@
+@import '../../../scss/mixins';
+
+.modal {
+	z-index: 3;
+	background-color: white;
+	width: 40%;
+	padding: 16px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 10px;
+	transition: all 0.3s ease-out;
+
+	@include mQ(320px, 420px) {
+		width: 80%;
+	}
+
+	@include mQ(421px, 620px) {
+		width: 70%;
+	}
+	@include mQ(621px, 820px) {
+		width: 60%;
+	}
+
+	@include mQ(821px, 960px) {
+		width: 50%;
+	}
+}
