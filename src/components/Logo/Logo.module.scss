@@ -1,9 +1,41 @@
+@import '../../scss/mixins';
+
 .logo {
 	height: 80%;
 	border-radius: 8px;
 	background: #ffffff;
 	width: 5%;
 	padding: 10px;
+	position: relative;
+
+	@include mQ(320px, 340px) {
+		width: 20%;
+	}
+	@include mQ(341px, 390px) {
+		width: 18%;
+	}
+	@include mQ(391px, 440px) {
+		width: 16%;
+	}
+	@include mQ(441px, 490px) {
+		width: 14%;
+	}
+	@include mQ(491px, 560px) {
+		width: 12%;
+	}
+	@include mQ(561px, 660px) {
+		width: 10%;
+	}
+	@include mQ(661px, 820px) {
+		width: 8%;
+	}
+	@include mQ(821px, 940px) {
+		width: 7%;
+	}
+	@include mQ(941px, 1200px) {
+		width: 6%;
+	}
+
 	img {
 		width: 100%;
 	}
