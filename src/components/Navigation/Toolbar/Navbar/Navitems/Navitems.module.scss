@@ -1,0 +1,17 @@
+.item {
+	border-bottom: 4px solid transparent;
+	height: 100%;
+	padding: 20px;
+
+	a {
+		text-decoration: none;
+		color: #ffffff;
+	}
+
+	&:hover,
+	&:active,
+	&.active {
+		background-color: #8f5c2c;
+		border-bottom: 4px solid #40a4c8;
+	}
+}
