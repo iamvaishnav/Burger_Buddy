@@ -1,15 +1,27 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Toolbar from '../Navigation/Toolbar/Toolbar';
 import Aux from '../../hoc/Auxiliary';
 import classes from './Layout.module.css';
 
-const layout = (props) => {
-	return (
-		<Aux>
-			<Toolbar />
-			<main className={classes.Content}>{props.children}</main>
-		</Aux>
-	);
-};
+class Layout extends Component {
+	state = {
+		isOpen: false,
+	};
 
-export default layout;
+	handleBurgerMenu = () => {
+		this.setState((prevState) => {
+			return { isOpen: !prevState.isOpen };
+		});
+	};
+
+	render() {
+		return (
+			<Aux>
+				<Toolbar isOpen={this.state.isOpen} toggleMenu={this.handleBurgerMenu} />
+				<main className={classes.Content}>{this.props.children}</main>
+			</Aux>
+		);
+	}
+}
+
+export default Layout;

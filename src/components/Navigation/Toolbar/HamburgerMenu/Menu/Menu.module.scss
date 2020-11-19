@@ -1,14 +1,23 @@
+@import '../../../../../scss/mixins';
+
 .menu {
-	display: flex;
+	display: none;
 	flex-direction: column;
 	height: 100vh;
-	padding: 2rem;
 	position: absolute;
-	top: 0;
+	top: 10vh;
 	right: 0;
 	transition: transform 0.3s ease-in-out;
-	background: transparentize($color: #6a4a85, $amount: 0.1);
-	width: 15%;
-	justify-content: center;
+	background: transparentize($color: #703b09, $amount: 0.05);
+	width: 40%;
 	z-index: 11;
+	transform: translateX(100%);
+
+	@include mQ(499px) {
+		display: flex;
+	}
+
+	@include mQ(315px, 400px) {
+		width: 50%;
+	}
 }
