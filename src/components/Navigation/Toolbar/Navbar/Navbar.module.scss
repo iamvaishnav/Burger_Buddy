@@ -1,5 +1,11 @@
+@import '../../../../scss/mixins';
+
 .navbar {
 	display: flex;
 	align-items: center;
 	height: 100%;
+
+	@include mQ(499px) {
+		display: none;
+	}
 }

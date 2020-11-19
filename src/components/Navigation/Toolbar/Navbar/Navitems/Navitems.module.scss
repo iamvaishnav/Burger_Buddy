@@ -1,7 +1,11 @@
+@import '../../../../../scss/mixins';
+
 .item {
 	border-bottom: 4px solid transparent;
 	height: 100%;
 	padding: 20px;
+	display: flex;
+	align-items: center;
 
 	a {
 		text-decoration: none;
@@ -13,5 +17,11 @@
 	&.active {
 		background-color: #8f5c2c;
 		border-bottom: 4px solid #40a4c8;
+	}
+
+	@include mQ(499px) {
+		height: 0;
+		width: 100%;
+		padding: 25px 10px;
 	}
 }

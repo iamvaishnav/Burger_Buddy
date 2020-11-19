@@ -8,7 +8,7 @@
 	padding: 10px;
 	position: relative;
 
-	@include mQ(320px, 340px) {
+	@include mQ(310px, 340px) {
 		width: 20%;
 	}
 	@include mQ(341px, 390px) {

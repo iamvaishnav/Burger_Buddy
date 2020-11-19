@@ -1,0 +1,14 @@
+.menu {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	padding: 2rem;
+	position: absolute;
+	top: 0;
+	right: 0;
+	transition: transform 0.3s ease-in-out;
+	background: transparentize($color: #6a4a85, $amount: 0.1);
+	width: 15%;
+	justify-content: center;
+	z-index: 11;
+}
