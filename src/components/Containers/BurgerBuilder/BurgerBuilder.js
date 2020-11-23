@@ -6,6 +6,7 @@ import Modal from '../../UI/Modal/Modal';
 import OrderSummary from '../../OrderSummary/OrderSummary';
 import axios from '../../../axios-order';
 import Spinner from '../../UI/Spinner/Spinner';
+import ErrorHandler from '../../../hoc/errorhandler';
 
 const igPrices = {
 	salad: 0.7,
@@ -159,4 +160,4 @@ class BurgerBuilder extends Component {
 	}
 }
 
-export default BurgerBuilder;
+export default ErrorHandler(BurgerBuilder, axios);
