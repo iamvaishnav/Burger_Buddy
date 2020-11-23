@@ -4,7 +4,7 @@ import classes from './Modal.module.scss';
 
 const modal = (props) => {
 	return (
-		<Backdrop show={props.show} cancelOrder={props.cancelOrder}>
+		<Backdrop show={props.show}>
 			<div
 				className={classes.modal}
 				style={{ transform: props.show ? 'translateY(0)' : 'translateY(-100vh)' }}

@@ -3,7 +3,7 @@ import classes from './Backdrop.module.scss';
 
 const backDrop = (props) => {
 	return props.show ? (
-		<div className={classes.overlay} onClick={props.cancelOrder}>
+		<div className={classes.overlay} >
 			{props.children}
 		</div>
 	) : null;
