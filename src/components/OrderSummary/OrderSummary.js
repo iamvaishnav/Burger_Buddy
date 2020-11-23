@@ -34,7 +34,9 @@ const OrderSummary = (props) => {
 			<Button type='Danger' action={props.cancelOrder}>
 				CANCEL
 			</Button>
-			<Button type='Success'>CONTINUE</Button>
+			<Button type='Success' action={props.proceedOrder}>
+				CONTINUE
+			</Button>
 		</Aux>
 	);
 };
