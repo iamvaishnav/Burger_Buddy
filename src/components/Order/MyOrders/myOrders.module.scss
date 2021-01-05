@@ -1,0 +1,11 @@
+.order {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 8px;
+	background-color: #eeeeee;
+
+	&:nth-child(2n) {
+		background-color: transparentize($color: #cf8f2e, $amount: 0.6);
+	}
+}

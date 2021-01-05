@@ -1,0 +1,17 @@
+.ordersList {
+	display: flex;
+	flex-direction: column;
+	width: 90%;
+	margin: 20vh auto 0 auto;
+
+	.header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 8px;
+		background-color: #fb9300;
+		color: #ffffff;
+		font-weight: 500;
+		font-size: 17px;
+	}
+}
