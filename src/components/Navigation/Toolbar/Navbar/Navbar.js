@@ -4,10 +4,10 @@ import Navitems from './Navitems/Navitems';
 
 const navBar = (props) => (
 	<div className={classes.navbar}>
-		<Navitems link='/' active>
+		<Navitems link='/' exact>
 			Burger Builder
 		</Navitems>
-		<Navitems link='/'>Checkout</Navitems>
+		<Navitems link='/my-orders'>My Orders</Navitems>
 	</div>
 );
 

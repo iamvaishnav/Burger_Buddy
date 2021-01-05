@@ -3,7 +3,7 @@ import Aux from '../../../hoc/Auxiliary';
 import Burger from '../../../components/Burger/Burger';
 import BurgerControls from '../../Burger/BurgerControls/BurgerControls';
 import Modal from '../../UI/Modal/Modal';
-import OrderSummary from '../../OrderSummary/OrderSummary';
+import OrderSummary from '../../Order/OrderSummary/OrderSummary';
 import axios from '../../../axios-order';
 import Spinner from '../../UI/Spinner/Spinner';
 import ErrorHandler from '../../../hoc/errorhandler';
@@ -83,40 +83,22 @@ class BurgerBuilder extends Component {
 	};
 
 	handleOrderContinue = () => {
-		this.setState({
-			loading: true,
+		const queryParams = [];
+		for (let key in this.state.ingredients) {
+			queryParams.push(
+				`${encodeURIComponent(key)}=${encodeURIComponent(this.state.ingredients[key])}`
+			);
+		}
+
+		queryParams.push(`price=${this.state.totalPrice}`);
+		const queryStrings = queryParams.join('&');
+
+		this.props.history.push({
+			pathname: '/checkout',
+			search: '?' + queryStrings,
 		});
 
-		const order = {
-			ingredients: this.state.ingredients,
-			price: this.state.totalPrice,
-			customer: {
-				name: 'Lex Luthor',
-				address: {
-					street: 'Joker Street',
-					ZipCode: '37644',
-					country: 'USA',
-				},
-			},
-			deliveryType: 'express',
-		};
-
-		axios
-			.post('/orders.json', order)
-			.then((resolve) => {
-				console.log(resolve);
-				this.setState({
-					loading: false,
-					ordered: false,
-				});
-			})
-			.catch((error) => {
-				console.log(error);
-				this.setState({
-					loading: false,
-					ordered: false,
-				});
-			});
+		console.log(this.props.history);
 	};
 
 	render() {
